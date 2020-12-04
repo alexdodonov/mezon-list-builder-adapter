@@ -20,9 +20,9 @@ interface ListBuilderAdapter
     /**
      * Method returns all vailable records
      *
-     * @return object all vailable records
+     * @return array all vailable records
      */
-    public function all(): object;
+    public function all(): array;
 
     /**
      * Method returns a subset from vailable records
@@ -33,9 +33,9 @@ interface ListBuilderAdapter
      *            the beginning of the bunch
      * @param int $limit
      *            the size of the batch
-     * @return object subset from vailable records
+     * @return array subset from vailable records
      */
-    public function getRecords(array $order, int $from, int $limit): object;
+    public function getRecords(array $order, int $from, int $limit): array;
 
     /**
      * Record preprocessor
