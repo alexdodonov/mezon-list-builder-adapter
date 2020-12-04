@@ -40,9 +40,9 @@ interface ListBuilderAdapter
     /**
      * Record preprocessor
      *
-     * @param array $record
+     * @param object $record
      *            record to be preprocessed
      * @return array preprocessed record
      */
-    public function preprocessListItem(array $record): array;
+    public function preprocessListItem(object $record): array;
 }
