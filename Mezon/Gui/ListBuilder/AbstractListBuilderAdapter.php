@@ -14,7 +14,7 @@ namespace Mezon\Gui\ListBuilder;
 /**
  * Interace for all adapters
  */
-abstract class SimpleListBuilderAdapter implements ListBuilderAdapter
+abstract class AbstractListBuilderAdapter implements ListBuilderAdapter
 {
     public function all(): array
     {}
