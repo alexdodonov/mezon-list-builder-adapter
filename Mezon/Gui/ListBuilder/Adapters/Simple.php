@@ -1,6 +1,8 @@
 <?php
 namespace Mezon\Gui\ListBuilder\Adapters;
 
+use Mezon\Gui\ListBuilder\ListBuilderAdapter;
+
 /**
  * Class Simple
  *
@@ -10,7 +12,6 @@ namespace Mezon\Gui\ListBuilder\Adapters;
  * @version v.1.0 (2020/12/15)
  * @copyright Copyright (c) 2020, aeon.org
  */
-
 
 /**
  * Simple adapter
@@ -31,8 +32,8 @@ abstract class Simple implements ListBuilderAdapter
     }
 
     /**
-     * 
-     * {@inheritDoc}
+     *
+     * {@inheritdoc}
      * @see \Mezon\Gui\ListBuilder\ListBuilderAdapter::getRecords()
      */
     public function getRecords(array $order, int $from, int $limit): array
