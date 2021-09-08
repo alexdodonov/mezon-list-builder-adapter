@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/7.0/phpunit.xsd"
+	backupGlobals="false" colors="true" bootstrap='./vendor/autoload.php'>
+	<php>
+		<ini name="error_reporting" value="-1" />
+	</php>
+
+	<testsuites>
+		<testsuite name="All Tests">
+			<directory suffix="UnitTest.php">./</directory>
+		</testsuite>
+	</testsuites>
+	<filter>
+		<whitelist addUncoveredFilesFromWhitelist="false">
+			<directory>./Mezon</directory>
+			<exclude>
+				<directory suffix="Test.php">./Mezon</directory>
+				<directory>./vendor/composer</directory>
+				<directory suffix="Mock.php">./</directory>
+				<file>./vendor/mezon/application/Mezon/Application/Tests/TestApplication.php</file>
+				<file>./vendor/mezon/service-transport/Mezon/Service/Tests/ConcreteFetcher.php</file>
+				<file>./vendor/mezon/request-params/Mezon/Transport/Tests/MockParamsFetcher.php</file>
+				<file>./vendor/mezon/application-actions/Mezon/Application/Tests/TestExtendingApplication.php</file>
+			</exclude>
+		</whitelist>
+	</filter>
+
+	<logging>
+		<log type="coverage-html"
+			target="./tmp/coverage-phpunit.html"></log>
+		<log type="coverage-text" target="php://stdout"
+			showOnlySummary="true"></log>
+	</logging>
+</phpunit>
